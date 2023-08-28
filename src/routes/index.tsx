@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { ButtonQwik as Button } from "@/components/ui/button";
+import { ButtonQwik as Button, buttonVariants } from "@/components/ui/button";
 import { MainNav } from "@/components/MainNav";
 
 export default component$(() => {
@@ -11,7 +11,8 @@ export default component$(() => {
           <div class="flex h-16 items-center px-4">
             <MainNav client:hover />
             <div class="ml-auto flex items-center space-x-4">
-              <Button>Log in</Button>
+              <a href="/" class={buttonVariants({ variant: "ghost" })}>Log in</a>
+              <a href="/" class={buttonVariants({ variant: "default" })}>Get Notion free</a>
             </div>
           </div>
         </div>
