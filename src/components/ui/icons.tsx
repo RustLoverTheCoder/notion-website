@@ -18,7 +18,6 @@ export const Icon = ({
 }) => {
   // @ts-ignore
   const LucideIcon = icons[name];
-  console.log("LucideIcon", LucideIcon);
 
   return (
     <LucideIcon color={color} size={size} className={cn(className, clsx)} />
