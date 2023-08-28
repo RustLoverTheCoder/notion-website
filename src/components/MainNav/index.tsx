@@ -13,40 +13,58 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 export const MainNav = qwikify$(() => {
+  const ProductList = [
+    {
+      title: "Wikis",
+      href: "/wikis",
+      description:
+        "Re-usable components built using Radix UI and Tailwind CSS.",
+    },
+    {
+      title: "Projects",
+      href: "/projects",
+      description: "How to install dependencies and structure your app.",
+    },
+    {
+      title: "Docs",
+      href: "/docs",
+      description: "Styles for headings, paragraphs, lists...etc",
+    },
+  ];
   const downLoadList = [
     {
       title: "iOS",
-      href: "/download/ios",
+      href: "/mobile",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
       title: "Android",
-      href: "/download/android",
+      href: "/mobile",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
       title: "Mac",
-      href: "/download/mac",
+      href: "/desktop",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
       title: "Windows",
-      href: "/download/windows",
+      href: "/desktop",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
       title: "Linux",
-      href: "/download/linux",
+      href: "/desktop",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
       title: "Web-Clipper",
-      href: "/download/web-clipper",
+      href: "/web-clipper",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
@@ -76,19 +94,19 @@ export const MainNav = qwikify$(() => {
   const list = [
     {
       title: "Blog",
-      href: "/docs/primitives/alert-dialog",
+      href: "/blog",
       description:
         "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
       title: "Guides & tutorials",
-      href: "/docs/primitives/hover-card",
+      href: "/guides",
       description:
         "For sighted users to preview content available behind a link.",
     },
     {
       title: "API Docs",
-      href: "/docs/primitives/progress",
+      href: "/api-docs",
       description:
         "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     },
@@ -117,15 +135,12 @@ export const MainNav = qwikify$(() => {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Wikis">
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
-                <ListItem href="/docs/installation" title="Projects">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Docs">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
+
+                {ProductList.map((component) => (
+                  <ListItem href={component.href} title={component.title}>
+                    {component.description}
+                  </ListItem>
+                ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
