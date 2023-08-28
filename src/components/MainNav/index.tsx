@@ -195,7 +195,7 @@ export const MainNav = qwikify$(() => {
           <NavigationMenuItem>
             <a href="/pricing">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                pricing
+                Pricing
               </NavigationMenuLink>
             </a>
           </NavigationMenuItem>
