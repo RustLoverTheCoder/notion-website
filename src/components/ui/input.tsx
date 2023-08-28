@@ -1,12 +1,15 @@
-import * as React from "react"
+/** @jsxImportSource react */
+import * as React from "react";
+import { qwikify$ } from "@builder.io/qwik-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  ({ className, type, children, ...props }, ref) => {
     return (
       <input
         type={type}
@@ -17,9 +20,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         {...props}
       />
-    )
+    );
   }
-)
-Input.displayName = "Input"
+);
+Input.displayName = "Input";
 
-export { Input }
+const InputQwik = qwikify$(Input);
+
+export { Input, InputQwik };
