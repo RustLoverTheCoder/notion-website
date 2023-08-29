@@ -2,8 +2,9 @@ import { component$, Slot } from "@builder.io/qwik";
 import { buttonVariants } from "@/components/ui/button";
 import { MainNav } from "@/components/MainNav";
 import { SiteFooter } from "../SiteFooter";
+import { cn } from "@/lib/utils";
 
-export default component$(() => {
+export default component$(({ bordered = false }: { bordered?: boolean }) => {
   return (
     <>
       <div class="hidden flex-col md:flex min-h-screen">
@@ -20,7 +21,7 @@ export default component$(() => {
             </div>
           </div>
         </div>
-        <main class="flex-1">
+        <main class={cn("flex-1", bordered && "border-t")}>
           <Slot />
         </main>
         <SiteFooter />
