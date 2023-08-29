@@ -6,7 +6,7 @@ import { SiteFooter } from "../SiteFooter";
 export default component$(() => {
   return (
     <>
-      <div class="hidden flex-col md:flex">
+      <div class="hidden flex-col md:flex min-h-screen">
         <div class="container">
           <div class="flex h-16 items-center px-4">
             <MainNav client:hover />
