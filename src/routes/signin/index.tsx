@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import { Image } from "@/components/Image";
-import { Link } from "@/components/Link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { UserAuthForm } from "@/components/UserAuthForm";
