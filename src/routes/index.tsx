@@ -19,7 +19,7 @@ export default component$(() => {
               >
                 Follow along on Twitter
               </Link>
-              <h1 class="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 class="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-medium">
                 An example app built using Next.js 13 server components.
               </h1>
               <p class="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
