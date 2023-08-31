@@ -12,10 +12,10 @@ export default component$(({ bordered = false }: { bordered?: boolean }) => {
           <div class="flex h-16 items-center px-4">
             <MainNav client:hover />
             <div class="ml-auto flex items-center space-x-4">
-              <a href="/" class={buttonVariants({ variant: "ghost" })}>
+              <a href="/login" class={buttonVariants({ variant: "ghost" })}>
                 Log in
               </a>
-              <a href="/" class={buttonVariants({ variant: "default" })}>
+              <a href="/login" class={buttonVariants({ variant: "default" })}>
                 Get Notion free
               </a>
             </div>
