@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import notes from "/images/to-do-list.svg";
+import notes from "public/images/to-do-list.svg";
 import { ButtonQwik as Button } from "@/components/ui/button";
 export default component$(() => {
   return (

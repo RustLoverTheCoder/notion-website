@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import paper from "/images/paper-plane.svg";
+import paper from "public/images/paper-plane.svg";
 import { ButtonQwik as Button } from "@/components/ui/button";
 export default component$(() => {
   return (

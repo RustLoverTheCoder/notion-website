@@ -12,7 +12,7 @@ import {
 import React from "react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
-import pencil from "/images/pencil.svg";
+import pencil from "public/images/pencil.svg";
 
 export const MainNav = qwikify$(() => {
   const ProductList = [

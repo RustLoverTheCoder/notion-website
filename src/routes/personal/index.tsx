@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import achievement from "/images/achievement.svg";
+import achievement from "public/images/achievement.svg";
 import { ButtonQwik as Button } from "@/components/ui/button";
 export default component$(() => {
   return (
