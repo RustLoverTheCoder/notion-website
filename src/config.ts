@@ -1,3 +1,4 @@
+export const APP_NAME = process.env.APP_NAME || '一笔';
 export const siteConfig = {
   name: "Taxonomy",
   description:
