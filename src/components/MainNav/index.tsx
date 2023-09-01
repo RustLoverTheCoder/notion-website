@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "../ui/button";
+import pencil from "/images/pencil.svg";
 
 export const MainNav = qwikify$(() => {
   const ProductList = [
@@ -112,7 +114,16 @@ export const MainNav = qwikify$(() => {
     },
   ];
   return (
-    <>
+    <div className="flex items-center">
+      <a
+        className={cn(
+          buttonVariants({ variant: "ghost" })
+        )}
+        href="/"
+      >
+        <img src={pencil} alt="logo" width={24} height={24} className="w-6 h-6 mr-2" />
+        <span className="hidden font-bold sm:inline-block">一笔</span>
+      </a>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -201,7 +212,7 @@ export const MainNav = qwikify$(() => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-    </>
+    </div>
   );
 });
 
