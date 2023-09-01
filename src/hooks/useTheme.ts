@@ -6,7 +6,7 @@ export type Theme = "dark" | "light" | "system";
 export const ThemeContext = createContextId<Signal<string>>("theme");
 
 export const useTheme = () => {
-  const theme = useSignal("system");
+  const theme = useSignal("light");
   useContextProvider(ThemeContext, theme);
   useVisibleTask$(async () => {
     const root = window.document.documentElement;
